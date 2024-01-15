@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Fruktur:ital@1&family=Kanit:wght@400;500&family=Kaushan+Script&family=Lilita+One&family=Luckiest+Guy&family=Mr+Dafoe&family=Open+Sans:wght@600&family=Orbitron:wght@600&family=Roboto+Slab&family=Staatliches&family=Yellowtail&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2f363e;
+    font-family: 'Kanit';
+}
+
+.container_list .todolist {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 65px rgba(0, 0, 0, 0.5),
+    10px 10px 60px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 10px 10px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container_list .todolist h2 {
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.container_list .todolist .inputBx {
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    height: 45px;
+    border-radius: 20px;
+    padding: 15px;
+    color: #696969;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container_list .todolist #listItem li {
+    position: relative;
+    list-style-type: none;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    background: #4169E1;
+    width: calc(100% - 45px);
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 7px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container_list .todolist #listItem li.done {
+    background: #607d8b;
+}
+
+.container_list .todolist #listItem li i {
+    position: absolute;
+    right: -45px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DC143C;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container_list .todolist #listItem li i::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.container_list .todolist #listItem li i::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(-45deg);
+}
+
+.container_list .todolist #listItem li::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f363e;
+}
+
+.container_list .todolist #listItem li.done::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    width: 15px;
+    height: 8px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(315deg);
+}
+
+#listItem {
+    position: relative;
+    margin-top: 20px;
+    height: 285px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
